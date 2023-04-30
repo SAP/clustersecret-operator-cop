@@ -1,0 +1,123 @@
+fullnameOverride: {{ .name }}
+
+controller:
+  replicaCount: {{ .controller.replicaCount }}
+  {{- with .controller.image }}
+  image:
+  {{- with .repository }}
+    repository: {{ . }}
+  {{- end }}
+  {{- with .tag }}
+    tag: {{ . }}
+  {{- end }}
+  {{- with .pullPolicy }}
+    pullPolicy: {{ . }}
+  {{- end }}
+  {{- with .pullSecret }}
+  imagePullSecrets:
+  - name: {{ . }}
+  {{- end }}
+  {{- end }}
+  {{- with .controller.nodeSelector }}
+  nodeSelector:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .controller.affinity }}
+  affinity:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .controller.topologySpreadConstraints }}
+  topologySpreadConstraints:
+  {{- toYaml . | nindent 2 }}
+  {{- end }}
+  {{- with .controller.tolerations }}
+  tolerations:
+  {{- toYaml . | nindent 2 }}
+  {{- end }}
+  {{- with .controller.priorityClassName }}
+  priorityClassName: {{ . }}
+  {{- end }}
+  {{- with .controller.podSecurityContext }}
+  podSecurityContext:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .controller.podLabels }}
+  podLabels:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .controller.podAnnotations }}
+  podAnnotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .controller.securityContext }}
+  securityContext:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .controller.resources }}
+  resources:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .controller.logLevel }}
+  logLevel: {{ . }}
+  {{- end }}
+
+webhook:
+  replicaCount: {{ .webhook.replicaCount }}
+  {{- with .webhook.image }}
+  image:
+  {{- with .repository }}
+    repository: {{ . }}
+  {{- end }}
+  {{- with .tag }}
+    tag: {{ . }}
+  {{- end }}
+  {{- with .pullPolicy }}
+    pullPolicy: {{ . }}
+  {{- end }}
+  {{- with .pullSecret }}
+  imagePullSecrets:
+  - name: {{ . }}
+  {{- end }}
+  {{- end }}
+  {{- with .webhook.nodeSelector }}
+  nodeSelector:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .webhook.affinity }}
+  affinity:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .webhook.topologySpreadConstraints }}
+  topologySpreadConstraints:
+  {{- toYaml . | nindent 2 }}
+  {{- end }}
+  {{- with .webhook.tolerations }}
+  tolerations:
+  {{- toYaml . | nindent 2 }}
+  {{- end }}
+  {{- with .webhook.priorityClassName }}
+  priorityClassName: {{ . }}
+  {{- end }}
+  {{- with .webhook.podSecurityContext }}
+  podSecurityContext:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .webhook.podLabels }}
+  podLabels:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .webhook.podAnnotations }}
+  podAnnotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .webhook.securityContext }}
+  securityContext:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .webhook.resources }}
+  resources:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .webhook.logLevel }}
+  logLevel: {{ . }}
+  {{- end }}

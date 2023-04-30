@@ -1,12 +1,8 @@
-# Our new open source project
+# ClusterSecret Operator Component Operator
 
 ## About this project
 
-*Insert a short description of your project here...*
-
-## Requirements and Setup
-
-*Insert a short description what is required to get your project running...*
+Component Operator for [https://github.com/sap/clustersecret-operator](https://github.com/sap/clustersecret-operator)
 
 ## Support, Feedback, Contributing
 

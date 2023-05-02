@@ -1,5 +1,7 @@
 # ClusterSecret Operator Component Operator
 
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP/clustersecret-operator-cop)](https://api.reuse.software/info/github.com/SAP/clustersecret-operator-cop)
+
 ## About this project
 
 Component Operator for [https://github.com/sap/clustersecret-operator](https://github.com/sap/clustersecret-operator)

@@ -4,11 +4,23 @@ on:
   release:
     types: [published]
 
+  push:
+    branches:
+    - main
+    paths-ignore:
+    - README.md
+
+  pull_request:
+    branches:
+    - main
+    paths-ignore:
+    - README.md
+
 env:
   REGISTRY: ghcr.io
 
 jobs:
-  build-and-push:
+  build:
     runs-on: ubuntu-22.04
     permissions:
       contents: read
@@ -52,7 +64,7 @@ jobs:
         images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
         labels: ${{ env.LABELS }}
 
-    - name: Build and push Docker image
+    - name: Build Docker image
       uses: docker/build-push-action@v4
       with:
         platforms: linux/amd64,linux/arm64

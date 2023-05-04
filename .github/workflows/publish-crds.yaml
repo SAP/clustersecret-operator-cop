@@ -1,0 +1,32 @@
+name: Publish Custom Resource Definitions
+
+on:
+  release:
+    types: [published]
+
+env:
+  REGISTRY: ghcr.io
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: read
+      packages: write
+
+    env:
+      IMAGE_NAME: ${{ github.repository }}/crds
+
+    steps:
+    - name: Setup regctl
+      run: |
+        curl -sSf -L -o $RUNNER_TEMP/regctl https://github.com/regclient/regclient/releases/download/v0.4.8/regctl-linux-amd64
+        chmod a+x $RUNNER_TEMP/regctl
+        
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Build artifact
+      run: |
+        cd crds
+        tar cvz * | $RUNNER_TEMP/regctl artifact put -m application/gzip ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.event.release.tag_name }}

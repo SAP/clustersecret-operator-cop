@@ -25,14 +25,13 @@ jobs:
     permissions:
       contents: read
       packages: write
-
     env:
       IMAGE_NAME: ${{ github.repository }}
 
     steps:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
-      
+
     - name: Checkout repository
       uses: actions/checkout@v3
 

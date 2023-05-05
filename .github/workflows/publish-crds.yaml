@@ -23,6 +23,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Log in to the registry
+      run: |
+        regctl registry login $REGISTRY --user ${{ github.actor }} --pass-stdin <<< ${{ secrets.GITHUB_TOKEN }}
+
     - name: Build artifact
       run: |
         cd crds

@@ -25,7 +25,7 @@ jobs:
 
     - name: Log in to the registry
       run: |
-        regctl registry login $REGISTRY --user ${{ github.actor }} --pass-stdin <<< ${{ secrets.GITHUB_TOKEN }}
+        $RUNNER_TEMP/regctl registry login $REGISTRY --user ${{ github.actor }} --pass-stdin <<< ${{ secrets.GITHUB_TOKEN }}
 
     - name: Build artifact
       run: |

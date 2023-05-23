@@ -1,4 +1,4 @@
-fullnameOverride: {{ .name }}
+fullnameOverride: {{ .Name }}
 
 controller:
   replicaCount: {{ .controller.replicaCount }}

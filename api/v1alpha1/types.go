@@ -17,11 +17,8 @@ limitations under the License.
 package v1alpha1
 
 import (
-	"context"
-
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
-	"sigs.k8s.io/controller-runtime/pkg/client"
 
 	"github.com/sap/component-operator-runtime/pkg/component"
 	componentoperatorruntimetypes "github.com/sap/component-operator-runtime/pkg/types"
@@ -117,16 +114,6 @@ func (c *ClusterSecretOperator) GetSpec() componentoperatorruntimetypes.Unstruct
 
 func (c *ClusterSecretOperator) GetStatus() *component.Status {
 	return &c.Status.Status
-}
-
-func PostReadHook(ctx context.Context, client client.Client, c *ClusterSecretOperator) error {
-	if c.Spec.Namespace == "" {
-		c.Spec.Namespace = c.Namespace
-	}
-	if c.Spec.Name == "" {
-		c.Spec.Name = c.Name
-	}
-	return nil
 }
 
 func init() {

@@ -3,7 +3,7 @@ SPDX-FileCopyrightText: 2023 SAP SE or an SAP affiliate company and clustersecre
 SPDX-License-Identifier: Apache-2.0
 */
 
-// Package v1alpha1 contains API Schema definitions for the operator v1alpha1 API group
+// Package v1alpha1 contains API Schema definitions for the operator v1alpha1 API group.
 // +kubebuilder:object:generate=true
 // +groupName=operator.kyma-project.io
 package v1alpha1
@@ -14,12 +14,20 @@ import (
 )
 
 var (
-	// GroupVersion is group version used to register these objects
+	// GroupVersion is group version used to register these objects.
 	GroupVersion = schema.GroupVersion{Group: "operator.kyma-project.io", Version: "v1alpha1"}
 
-	// SchemeBuilder is used to add go types to the GroupVersionKind scheme
+	// SchemeBuilder is used to add go types to the GroupVersionKind scheme.
 	SchemeBuilder = &scheme.Builder{GroupVersion: GroupVersion}
 
 	// AddToScheme adds the types in this group-version to the given scheme.
 	AddToScheme = SchemeBuilder.AddToScheme
+
+	// Needed by kubernetes/code-generator.
+	SchemeGroupVersion = GroupVersion
 )
+
+// Needed by kubernetes/code-generator.
+func Resource(resource string) schema.GroupResource {
+	return GroupVersion.WithResource(resource).GroupResource()
+}

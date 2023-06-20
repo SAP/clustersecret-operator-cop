@@ -4,7 +4,7 @@
 
 ## About this project
 
-Component Operator for [https://github.com/sap/clustersecret-operator](https://github.com/sap/clustersecret-operator)
+Component Operator for [https://github.com/sap/clustersecret-operator](https://github.com/sap/clustersecret-operator).
 
 ## Support, Feedback, Contributing
 

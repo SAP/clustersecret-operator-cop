@@ -110,6 +110,7 @@ func (o *Operator) Setup(mgr ctrl.Manager, discoveryClient discovery.DiscoveryIn
 	if err != nil {
 		return errors.Wrap(err, "error initializing resource generator")
 	}
+
 	if err := component.NewReconciler[*operatorv1alpha1.ClusterSecretOperator](
 		o.options.Name,
 		mgr.GetClient(),
@@ -120,5 +121,6 @@ func (o *Operator) Setup(mgr ctrl.Manager, discoveryClient discovery.DiscoveryIn
 	).SetupWithManager(mgr); err != nil {
 		return errors.Wrapf(err, "unable to create controller")
 	}
+
 	return nil
 }

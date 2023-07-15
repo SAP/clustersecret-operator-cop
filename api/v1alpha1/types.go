@@ -13,7 +13,7 @@ import (
 	componentoperatorruntimetypes "github.com/sap/component-operator-runtime/pkg/types"
 )
 
-// ClusterSecretOperatorSpec defines the desired state of ClusterSecretOperator
+// ClusterSecretOperatorSpec defines the desired state of ClusterSecretOperator.
 type ClusterSecretOperatorSpec struct {
 	component.Spec `json:",inline"`
 	// +optional
@@ -22,7 +22,7 @@ type ClusterSecretOperatorSpec struct {
 	Webhook WebhookSpec `json:"webhook"`
 }
 
-// ControllerSpec defines the desired state of the controller deployment
+// ControllerSpec defines the desired state of the controller deployment.
 type ControllerSpec struct {
 	// +kubebuilder:validation:Minimum=1
 	// +kubebuilder:default=1
@@ -33,7 +33,7 @@ type ControllerSpec struct {
 	LogLevel                       int `json:"logLevel,omitempty"`
 }
 
-// WebhookSpec defines the desired state of the webhook deployment
+// WebhookSpec defines the desired state of the webhook deployment.
 type WebhookSpec struct {
 	// +kubebuilder:validation:Minimum=1
 	// +kubebuilder:default=1
@@ -44,7 +44,7 @@ type WebhookSpec struct {
 	LogLevel                       int `json:"logLevel,omitempty"`
 }
 
-// ClusterSecretOperatorStatus defines the observed state of ClusterSecretOperator
+// ClusterSecretOperatorStatus defines the observed state of ClusterSecretOperator.
 type ClusterSecretOperatorStatus struct {
 	component.Status `json:",inline"`
 }
@@ -55,7 +55,7 @@ type ClusterSecretOperatorStatus struct {
 // +kubebuilder:printcolumn:name="Age",type="date",JSONPath=".metadata.creationTimestamp"
 // +genclient
 
-// ClusterSecretOperator is the Schema for the clustersecretoperators API
+// ClusterSecretOperator is the Schema for the clustersecretoperators API.
 type ClusterSecretOperator struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
@@ -69,7 +69,7 @@ var _ component.Component = &ClusterSecretOperator{}
 
 // +kubebuilder:object:root=true
 
-// ClusterSecretOperatorList contains a list of ClusterSecretOperator
+// ClusterSecretOperatorList contains a list of ClusterSecretOperator.
 type ClusterSecretOperatorList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`

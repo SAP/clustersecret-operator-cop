@@ -17,6 +17,7 @@ import (
 
 	"github.com/sap/component-operator-runtime/pkg/component"
 	"github.com/sap/component-operator-runtime/pkg/manifests"
+	helmgenerator "github.com/sap/component-operator-runtime/pkg/manifests/helm"
 	"github.com/sap/component-operator-runtime/pkg/operator"
 
 	operatorv1alpha1 "github.com/sap/clustersecret-operator-cop/api/v1alpha1"
@@ -98,7 +99,7 @@ func (o *Operator) Setup(mgr ctrl.Manager) error {
 	if err != nil {
 		return errors.Wrap(err, "error initializing parameter transformer")
 	}
-	resourceGenerator, err := manifests.NewHelmGeneratorWithParameterTransformer(
+	resourceGenerator, err := helmgenerator.NewHelmGeneratorWithParameterTransformer(
 		data,
 		"data/charts/clustersecret-operator",
 		mgr.GetClient(),

@@ -1,6 +1,6 @@
 # clustersecret-operator
 
-![Version: 0.3.25](https://img.shields.io/badge/Version-0.3.25-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.3.23](https://img.shields.io/badge/AppVersion-v0.3.23-informational?style=flat-square)
+![Version: 0.3.26](https://img.shields.io/badge/Version-0.3.26-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.3.24](https://img.shields.io/badge/AppVersion-v0.3.24-informational?style=flat-square)
 
 A Helm chart for https://github.com/sap/clustersecret-operator
 

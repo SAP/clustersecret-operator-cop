@@ -161,6 +161,8 @@ github.com/sap/component-operator-runtime v0.3.41 h1:1q+/20ICELf3fiifF48lIghHuSQ
 github.com/sap/component-operator-runtime v0.3.41/go.mod h1:frTTWBVq/zohn6pB2UNXcxPjOpzNZBZdP3s4B2d0Yq0=
 github.com/sap/component-operator-runtime v0.3.42 h1:Ye8toRB/OPKxyrW8Q00KEu26dZjBtEFPaMhheCV4C98=
 github.com/sap/component-operator-runtime v0.3.42/go.mod h1:frTTWBVq/zohn6pB2UNXcxPjOpzNZBZdP3s4B2d0Yq0=
+github.com/sap/component-operator-runtime v0.3.43 h1:565jAWN1fcOSzCuGOTb+N/4KID0f310fd85wQTgOQdA=
+github.com/sap/component-operator-runtime v0.3.43/go.mod h1:DU5YsUNDihcyt5syPoIhwLDh9CvyFB3DQhTwNms8hvY=
 github.com/sap/go-generics v0.2.13 h1:rSED7M+S7aw/9AomJq7omjgZtwvoixHsfVbOiCWs4cM=
 github.com/sap/go-generics v0.2.13/go.mod h1:G6v+AnJtKlUGB/ATd+zdUcosvBdUSyrHg7/kn5UKgx8=
 github.com/sap/go-generics v0.2.18 h1:vkfXvxG9KICMxZw2PoLQE78tvSCrY0Qemrclg2MVniY=
@@ -275,6 +277,8 @@ golang.org/x/time v0.5.0 h1:o7cqy6amK/52YcAKIPlM3a+Fpj35zvRj2TP+e1xFSfk=
 golang.org/x/time v0.5.0/go.mod h1:3BpzKBy/shNhVucY/MWOyx10tF3SFh9QdLuxbVysPQM=
 golang.org/x/time v0.6.0 h1:eTDhh4ZXt5Qf0augr54TN6suAUudPcawVZeIAPU7D4U=
 golang.org/x/time v0.6.0/go.mod h1:3BpzKBy/shNhVucY/MWOyx10tF3SFh9QdLuxbVysPQM=
+golang.org/x/time v0.7.0 h1:ntUhktv3OPE6TgYxXWv9vKvUSJyIFJlyohwbkEwPrKQ=
+golang.org/x/time v0.7.0/go.mod h1:3BpzKBy/shNhVucY/MWOyx10tF3SFh9QdLuxbVysPQM=
 golang.org/x/tools v0.0.0-20180917221912-90fa682c2a6e/go.mod h1:n7NCudcB/nEzxVGmLbDWY5pfWTLqBcC2KZ6jyYvM4mQ=
 golang.org/x/tools v0.0.0-20191119224855-298f0cb1881e/go.mod h1:b+2E5dAYhXwXZwtnZ6UAqBI28+e2cm9otk0dWdXHAEo=
 golang.org/x/tools v0.0.0-20200619180055-7c47624df98f/go.mod h1:EkVYQZoAsY45+roYkvgYkIh4xh/qjgUK9TdY2XT94GE=

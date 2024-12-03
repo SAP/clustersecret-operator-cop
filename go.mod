@@ -1,6 +1,6 @@
 module github.com/sap/clustersecret-operator-cop
 
-go 1.23.3
+go 1.23.4
 
 require (
 	github.com/pkg/errors v0.9.1

@@ -4,7 +4,7 @@ go 1.23.4
 
 require (
 	github.com/pkg/errors v0.9.1
-	github.com/sap/component-operator-runtime v0.3.59
+	github.com/sap/component-operator-runtime v0.3.60
 	k8s.io/apiextensions-apiserver v0.32.0
 	k8s.io/apimachinery v0.32.0
 	k8s.io/client-go v0.32.0
@@ -60,7 +60,7 @@ require (
 	go.uber.org/zap v1.27.0 // indirect
 	golang.org/x/crypto v0.31.0 // indirect
 	golang.org/x/exp v0.0.0-20240719175910-8a7402abbf56 // indirect
-	golang.org/x/net v0.30.0 // indirect
+	golang.org/x/net v0.32.0 // indirect
 	golang.org/x/oauth2 v0.23.0 // indirect
 	golang.org/x/sys v0.28.0 // indirect
 	golang.org/x/term v0.27.0 // indirect

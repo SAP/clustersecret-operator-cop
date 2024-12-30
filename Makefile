@@ -116,6 +116,7 @@ envtest: setup-envtest ## Install envtest binaries
 	ln -s $$ENVTESTDIR $(LOCALBIN)/k8s/current
 
 ##@ Manage Content
+
 .PHONY: update-content
 update-content: ## Update external resources used by this repository.
 	rm -rf pkg/operator/data/charts

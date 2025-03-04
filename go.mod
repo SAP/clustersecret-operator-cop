@@ -1,6 +1,6 @@
 module github.com/sap/clustersecret-operator-cop
 
-go 1.23.5
+go 1.24.1
 
 require (
 	github.com/pkg/errors v0.9.1
@@ -12,7 +12,7 @@ require (
 	k8s.io/kube-aggregator v0.32.1
 	sigs.k8s.io/controller-runtime v0.20.1
 	sigs.k8s.io/controller-runtime/tools/setup-envtest v0.0.0-20250109154033-1de5a3e8bae9
-	sigs.k8s.io/controller-tools v0.16.5
+	sigs.k8s.io/controller-tools v0.17.2
 )
 
 require (

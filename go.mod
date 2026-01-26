@@ -1,17 +1,17 @@
 module github.com/sap/clustersecret-operator-cop
 
-go 1.25.5
+go 1.25.6
 
 require (
 	github.com/pkg/errors v0.9.1
-	github.com/sap/component-operator-runtime v0.3.126
+	github.com/sap/component-operator-runtime v0.3.129
 	k8s.io/apiextensions-apiserver v0.35.0
 	k8s.io/apimachinery v0.35.0
 	k8s.io/client-go v0.35.0
 	k8s.io/code-generator v0.35.0
 	k8s.io/kube-aggregator v0.35.0
 	sigs.k8s.io/controller-runtime v0.23.0
-	sigs.k8s.io/controller-runtime/tools/setup-envtest v0.0.0-20250109154033-1de5a3e8bae9
+	sigs.k8s.io/controller-runtime/tools/setup-envtest v0.0.0-20260125161707-82cc073adb06
 	sigs.k8s.io/controller-tools v0.20.0
 )
 
@@ -57,9 +57,9 @@ require (
 	github.com/prometheus/client_model v0.6.2 // indirect
 	github.com/prometheus/common v0.66.1 // indirect
 	github.com/prometheus/procfs v0.16.1 // indirect
-	github.com/sap/go-generics v0.2.47 // indirect
+	github.com/sap/go-generics v0.2.49 // indirect
 	github.com/shopspring/decimal v1.4.0 // indirect
-	github.com/spf13/afero v1.6.0 // indirect
+	github.com/spf13/afero v1.12.0 // indirect
 	github.com/spf13/cast v1.10.0 // indirect
 	github.com/spf13/cobra v1.10.2 // indirect
 	github.com/spf13/pflag v1.0.10 // indirect

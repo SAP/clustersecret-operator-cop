@@ -83,6 +83,8 @@ controller:
       cpu: 0.01
   # -- Log level
   logLevel: 0
+  dnsPolicy: ClusterFirst
+  hostNetwork: false
 
 webhook:
   # -- Replica count
@@ -136,3 +138,5 @@ webhook:
     port: 443
   # -- Log level
   logLevel: 0
+  dnsPolicy: ClusterFirst
+  hostNetwork: false

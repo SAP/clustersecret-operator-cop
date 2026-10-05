@@ -74,6 +74,8 @@ spec:
       {{- end }}
       serviceAccountName: {{ include "clustersecret-operator.webhook.fullname" . }}
       automountServiceAccountToken: true
+      dnsPolicy: {{ .Values.webhook.dnsPolicy }}
+      hostNetwork: {{ .Values.webhook.hostNetwork }}
       containers:
       - name: webhook
         image: {{ .Values.webhook.image.repository }}:{{ .Values.webhook.image.tag | default .Values.global.image.tag | default .Chart.AppVersion }}

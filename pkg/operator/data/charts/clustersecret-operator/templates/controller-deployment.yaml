@@ -74,6 +74,8 @@ spec:
       {{- end }}
       serviceAccountName: {{ include "clustersecret-operator.controller.fullname" . }}
       automountServiceAccountToken: true
+      dnsPolicy: {{ .Values.controller.dnsPolicy }}
+      hostNetwork: {{ .Values.controller.hostNetwork }}
       containers:
       - name: controller
         image: {{ .Values.controller.image.repository }}:{{ .Values.controller.image.tag | default .Values.global.image.tag | default .Chart.AppVersion }}

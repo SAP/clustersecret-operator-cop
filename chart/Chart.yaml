@@ -2,5 +2,5 @@ apiVersion: v2
 name: clustersecret-operator-cop
 description: A Helm chart for https://github.com/sap/clustersecret-operator-cop
 type: application
-version: 0.1.125
-appVersion: v0.1.125
+version: 0.1.126
+appVersion: v0.1.126
